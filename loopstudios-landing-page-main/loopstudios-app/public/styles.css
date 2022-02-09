@@ -1,0 +1,527 @@
+:root {
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(0, 0%, 0%);
+  --darkGray: hsl(0, 0%, 55%);
+  --veryDarkGray: hsl(0, 0%, 41%);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+  background: var(--white);
+  
+}
+img{
+  width: 100%;
+  display:block; /* to remove the unwanted bottom padding */
+}
+
+p{
+  font-size: 15px;
+  font-family: 'Alata', sans-serif;
+  font-weight: 400;
+}
+
+ul{
+  list-style:none;
+}
+
+a{
+  text-decoration: none;
+  color:inherit;
+}
+
+.container{
+  margin:2rem 1.5rem;
+
+}
+
+.heading{
+  text-transform: uppercase;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 300;
+  line-height: 1;
+
+}
+
+.nav-menu{
+  display:flex;
+  font-family: 'Alata', sans-serif;
+  font-weight: 400;
+}
+
+.desktop{
+  display:none;
+}
+
+/* HERO section ---------------------------------------------- */
+.hero{
+  color: var(--white);
+}
+
+.hero,.hero-img-wrapper{
+  height:95vh;
+}
+
+.hero-img-wrapper{
+  background:url("./images/mobile/image-hero.jpg");
+  background-size: cover;
+  width:100%;
+  position:absolute;
+  top:0;
+  left:0;
+  z-index:-1;
+}
+
+header{
+ display:flex;
+ justify-content:space-between;
+ align-items: center;
+ margin: 3rem 2rem;
+}
+
+.logo{
+ width: 11.5rem;
+ height:auto;
+}
+
+.navbar{
+  display:flex;
+  justify-content: space-between;
+  align-items:baseline;
+}
+
+header .nav-menu-wrapper{
+width:100%;
+height:100%;
+background:var(--black) ;
+position:fixed;
+top:0;
+left:0;
+padding:2rem;
+z-index: 9999;
+left:-100%;
+transition: ease-in-out 0.2s;
+
+}
+
+header .nav-menu-wrapper.active{
+  left:0;
+}
+
+
+header .nav-menu-wrapper .nav-menu-top{
+  display:flex;
+  justify-content:space-between;
+}
+
+header .nav-menu{
+  display:flex;
+  flex-direction:column;
+  gap: 1rem;
+  font-size: 1.8em;
+  letter-spacing: 0.1em;
+  color: rgb(173, 172, 172);
+  text-transform: uppercase;
+  text-align: left;
+  margin-top:11rem;
+}
+
+
+.hamburger-menu{
+  cursor:pointer;
+}
+
+.close-menu{
+  cursor:pointer;
+}
+
+
+.hero-heading{
+  border: 2px solid var(--white);
+  padding:1.2rem 1.7rem 1rem 1.5rem;
+  margin:38% 1rem auto 2rem;
+}
+
+.hero-heading .heading{
+  font-size: 2.6em;
+}
+
+/* Interactive VR section ------------------------------------------------------------------ */
+.interactiveVR .container{
+  margin:5.5rem 1.5rem;
+  display:flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  gap:1rem;
+}
+
+.interactiveVR-heading{
+  font-size: 2em;
+  line-height: 1;
+  margin-top:1.5rem ;
+}
+
+.interactiveVR p{
+  line-height: 1.5;
+  color: var(--darkGray);
+  margin:0 1rem;
+}
+
+/* Creation section and components --------------------------------------------------------- */
+.creations .container{
+  display:flex;
+  flex-direction: column;
+  gap:1.5rem;
+  align-items: center;
+}
+.creations-heading{
+  font-size: 2em;
+  margin-bottom:1rem;
+}
+
+.component-wrapper{
+  position:relative;
+}
+
+.component-wrapper::after{
+  content:"";
+  display:block;
+  background-image:linear-gradient( to right, rgba(0, 0, 0, 0.6) ,rgba(0, 0, 0, 0.055)) ;
+  height:100%;
+  width:50%;
+  position:absolute;
+  top:0;
+  left:0;
+  z-index:0;
+}
+
+.component-heading{
+  position:absolute;
+  color:rgb(223, 219, 219);
+  top:40%;
+  left:1.3rem;
+  text-align: left;
+  padding-right:0;
+  max-width:9rem;
+  z-index:1;
+}
+
+.component-wrapper:nth-last-of-type(5) .component-heading{
+  /* for the heading "the grid" to wrap */
+  max-width:2rem;
+}
+
+.creations-btn{
+  text-transform: uppercase;
+  padding:0.5rem 2rem;
+  font-size: 0.8em;
+  font-family: 'Alata',sans-serif;
+  font-weight: 400;
+  letter-spacing: 5px;
+  background: var(--white);
+  color: var(--black);
+  border: 1.8px solid var(--black);
+  cursor:pointer;
+}
+
+/* Footer ---------------------------------------------------------------------------------- */
+.footer{
+  background: var(--black);
+  color:var(--white);
+  text-align: center;
+  font-family: 'Alata', sans-serif;
+  font-weight: 400;
+  padding-top:2rem;
+}
+
+
+.footer .container{
+  margin-bottom:0;
+}
+
+.footer .logo{
+  margin:1rem auto;
+}
+
+.footer .nav-menu{
+  flex-direction: column;
+  gap:1rem;
+  align-items: center;
+}
+
+.socials-wrapper{
+  display:flex;
+  justify-content:center;
+  margin:2.5rem auto 1rem;
+}
+
+.social-item{
+  height:1.3rem;
+  width:auto;
+  margin:0 0.5rem;
+}
+
+.footer-attribution{
+  color:var(--veryDarkGray);
+  font-size: 0.8em;
+}
+
+
+
+@media(min-width:680px){
+
+  /* Hero section ---------------------------------- */
+  .hero-heading{
+    padding:1.2rem 1.7rem 1rem 1.5rem;
+    margin:25% 1rem auto 2rem;
+    max-width: 50%;
+  }
+
+ 
+/*InteractiveVR ------------------------------------ */
+
+
+.interactiveVR .container{
+  margin:5.5rem 7%;
+  display:flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  gap:1rem;
+}
+
+
+ 
+  /* Creations and components ------------------------------------*/
+
+  .creations .container{
+    display:flex;
+    flex-direction: column;
+    gap:1.5rem;
+    align-items: center;
+    margin: auto 3rem 4rem;
+  }
+}
+
+
+
+@media(min-width:1024px){
+
+  .heading{
+    font-weight: bold;
+  }
+
+  /* HERO section ------------------ */
+
+  .mobile{
+    display:none;
+  }
+
+  .desktop{
+    display:block;
+  }
+
+
+  .hero-img-wrapper{
+    background:url("./images/desktop/image-hero.jpg");
+    background-size: cover;
+    background-position: top center;
+    width:100%;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:-1;
+  }
+
+
+  header .nav-menu-wrapper{
+    position:static;
+    background:transparent;
+  }
+
+  header .nav-menu-wrapper .nav-menu-top{
+    display:none;
+  }
+
+
+  header .nav-menu{
+  display:flex;
+  flex-direction:row;
+  justify-content:space-between;
+  gap: 1.5rem;
+  font-size:1.2em;
+  letter-spacing: 0;
+  color: var(--white);
+  margin:0;
+  text-transform: capitalize;
+}
+
+  
+
+  .hero-heading{
+    padding:2rem 5rem 2rem 1.5rem;
+    margin:20% 1rem auto 2rem;
+    max-width: 50%;
+  }
+
+ /* InteractiveVR ------------------ */
+
+ .interactiveVR .container{
+  /* margin:5.5rem 10%; */
+  margin: 2% 10%;
+  position:relative;
+ }
+
+  .interactiveVR-img-wrapper{
+    width:60%;
+    height:100%;
+    margin-left:2rem;
+    position:relative;
+    z-index:-1;
+  }
+
+  .interactiveVR-info{
+    background: var(--white);
+    /* width:43%;*/
+    /* height:60%; */
+    position:absolute;
+    bottom:0;
+    left:50%;
+    padding-top:6%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    text-align: left;
+    padding-left: 5%;
+    
+    
+  }
+
+   .interactiveVR-heading{
+    font-size: 1.3em;
+    line-height: 1;
+    margin-bottom:1em;
+    padding-right:10rem;
+
+  } 
+
+  .interactiveVR p{
+    line-height: 1.5;
+    color: var(--darkGray);
+    margin:0;
+    padding:0;
+    font-size: 0.8em;
+    flex-shrink:0;
+  } 
+
+  /* Creations and components ----------------------- */
+
+  .creations .container{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    align-items: center;
+    margin: 5rem 10% 4rem;
+  }
+
+  .creations-heading{
+    grid-column:1 / span 2;
+    justify-self: start;
+    align-self: start;
+  }
+
+  .creations-btn.desktop{
+    grid-column:3 / span 2;
+    justify-self: end;
+    align-self: start;
+
+  } 
+
+  /* Footer ---------------------------------------- */
+
+.footer .container{
+  display:grid;
+  grid-template-columns: repeat(2,1fr);
+  margin:0 10%;
+  padding: 1.5% 0;
+  gap:1rem;
+}
+
+.footer .logo{
+  margin:0;
+  max-width:35%
+}
+
+.footer .nav-menu{
+  flex-direction: row;
+  gap:1rem;
+  align-items: center;
+  grid-column: 1;
+  grid-row: 2;
+
+}
+
+.socials-wrapper{
+  display:flex;
+  grid-column:2;
+  grid-row:1;
+  margin:0;
+  justify-self: end;
+}
+
+.footer-attribution{
+  color:var(--veryDarkGray);
+  font-size: 0.8em;
+  justify-self: end;
+}
+
+
+}
+
+
+@media(min-width:1200px){
+
+/* HERO -------------------------------- */
+  
+
+  .hero-container{
+    margin: 0 10%;
+  }
+
+  .hero-heading{
+    padding:2rem 5rem 2rem 1.5rem;
+    margin:15% 1rem auto 2rem;
+    max-width: 50%;
+  }
+
+  .hero-heading .heading{
+    font-size: 3.5em;
+    
+  }
+
+
+/* InteractiveVR------------------------ */
+  .interactiveVR .container{
+    margin: 2% 18%;
+   }
+
+/* Creations and components ------------ */
+
+  .creations .container{
+    margin: 5rem 18% 4rem;
+  }
+
+  /* Footer -------------------------------- */
+
+  .footer .container{
+    margin:0 18%;
+    padding: 1.5% 0;
+  }
+
+}

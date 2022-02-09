@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <!-- faviticon icons link -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <!-- Google fonts link -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- CSS styles link -->
+  <link rel="stylesheet" href="styles.css">
+
+
+  <title>Frontend Mentor | NFT preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+
+</head>
+
+<body>
+
+  <!-- <div class="card">
+    <div class="container-shadow"> 
+      <div class="container-card-bg"> 
+        <div class="container-img">
+          <img class="img-nft" src="./images/image-equilibrium.jpg" alt="nft">
+        </div>
+        
+        <div class="container">
+          <h4 class="card-title">Equilibrium #3429</h4>
+          <p class="card-text">Our Equilibrium collection promotes balance and calm.</p>
+
+          <span class="card-value"><svg class="icon" width="11" height="17.7" xmlns="http://www.w3.org/2000/svg">
+              <path d="M11 10.216 5.5 18 0 10.216l5.5 3.263 5.5-3.262ZM5.5 0l5.496 9.169L5.5 12.43 0 9.17 5.5 0Z"
+                fill="#00FFF8" />
+            </svg> 0.041ETH</span>
+
+          <span class="card-expireDate"><svg class="icon" width="17" height="15" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M8.305 2.007a6.667 6.667 0 1 0 0 13.334 6.667 6.667 0 0 0 0-13.334Zm2.667 7.334H8.305a.667.667 0 0 1-.667-.667V6.007a.667.667 0 0 1 1.334 0v2h2a.667.667 0 0 1 0 1.334Z"
+                fill="#8BACD9" />
+            </svg> 3 days left</span>
+
+          <hr>
+          
+          <div class="container-author">
+            <div class="container-avatar">
+              <img class="img-avatar" src="./images/images-avatar-boy.jpeg" alt="avatar">
+            </div>
+            <div class="author-content">
+              <span class="author-text">Creation of </span>
+              <span class="author-name"> Fabio Vitharana</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+  <div class="card">
+
+    <div class="img-nft-container">
+      <img class="img-nft" src="./images/image-equilibrium.jpg" alt="nft">
+      <div class="img-overlay">
+        <img src="./images/icon-view.svg" alt="">
+      </div>
+    </div>
+
+    <!--card info ---------------------------------------------------------------------------------------------------------------- -->
+    <article class="card-info">
+      <h2 class="card-info-title">Equilibrium #3429</h2>
+
+      <p class="card-info-description">Our Equilibrium collection promotes balance and calm.</p>
+
+      <div class="card-info-details">
+        <span class="card-info-price">
+          <img src="./images/icon-ethereum.svg" alt="ethereum icon">
+          0.041 ETH
+        </span>
+
+        <span class="card-info-expireTime">
+          <img src="./images/icon-clock.svg" alt="clock icon">
+          3 days left
+        </span>
+      </div>
+
+    </article>
+
+    <!-- Author info----------------------------------------------------------------------------------------------------------- -->
+
+    <article class="author-info">
+      <div class="author-img-container">
+        <img class="img-avatar" src="./images/image-avatar.png" alt="avatar">
+      </div>
+      <span>Creation of</span>
+      <span class="author-info-name"> Jules Wyvern</span>
+    </article>
+  </div>
+
+  <!-- -------------------------------------------------------------------------------------------------------------------- -->
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Fabio Vitharana</a>.
+  </div>
+
+</body>
+
+</html>
