@@ -1,0 +1,133 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  height: 100vh;
+  background-image: linear-gradient(135deg, white, #fff5f5);
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.heading-primary {
+  font-size: 4.5rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.9rem;
+  padding: 1rem;
+  color: #413a3a;
+}
+.heading-primary span {
+  color: #ce9797;
+  font-weight: 300;
+}
+
+.paragraph {
+  padding: 0 1.5rem;
+  background-image: linear-gradient(135deg, #d19f9f, #ee8c8c);
+  background-clip: text;
+  color: transparent;
+}
+
+.u-margin-bottom-small {
+  margin-bottom: 2rem;
+}
+
+.u-margin-bottom-medium {
+  margin-bottom: 4rem;
+}
+
+.u-center {
+  margin: 0 auto;
+}
+
+.btn {
+  cursor: pointer;
+  border: none;
+  display: inline-block;
+  font-family: inherit;
+}
+.btn-arrow {
+  height: 100%;
+  padding: 1rem 2.5rem;
+  border-radius: 5rem;
+  position: absolute;
+  top: 0;
+  right: 0rem;
+  background-image: linear-gradient(135deg, #f8bfbf, #ee8c8c);
+  box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.3);
+}
+
+.form {
+  position: relative;
+}
+.form__input-email {
+  width: 100%;
+  padding: 1.5rem 2.5rem;
+  border-radius: 5rem;
+  color: #ce9797;
+  border: 1px solid #e9b4b4;
+  font-family: inherit;
+  transition: all 0.2s;
+  background-image: linear-gradient(135deg, white, #fff5f5);
+}
+.form__input-email:focus {
+  outline: none;
+  border: 1.5px solid #ad5252;
+}
+
+.header__logo-box {
+  padding: 3rem 4rem;
+}
+
+.hero__img--mobile {
+  width: 100%;
+}
+
+.footer {
+  padding: 10rem 0;
+}
+.footer__attribution {
+  font-size: 1.1rem;
+  text-align: center;
+}
+.footer__link:link, .footer__link:visited {
+  color: #332e2e;
+  font-size: 1.2rem;
+  transition: all 0.2s;
+  display: inline-block;
+  border-radius: 5rem;
+}
+.footer__link:hover {
+  color: #ce9797;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.05);
+  transform: translateY(-0.4rem);
+}
+
+.section-left {
+  padding: 2rem 0;
+}
+
+.sign-up-section {
+  padding: 4rem 1rem 0;
+  text-align: center;
+  width: 80%;
+}
+
+/*# sourceMappingURL=main.css.map */

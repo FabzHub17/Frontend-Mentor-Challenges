@@ -1,0 +1,33 @@
+@use "../abstracts/variables" as v;
+
+.footer{
+    padding:10rem 0;
+
+    &__attribution{
+        font-size: 1.1rem;
+        text-align: center;
+
+    }
+
+    &__link{
+
+        &:link,
+        &:visited{
+            color: v.$color-secondary-dark;
+            font-size: 1.2rem;
+            transition:all .2s;
+            display: inline-block;
+            border-radius: 5rem;
+        }
+
+        &:hover{
+            color: v.$color-primary-light;
+            box-shadow: 0 1rem 2rem rgba(#000,.05);
+            transform: translateY(-.4rem);
+        }
+       
+
+
+
+    }
+}

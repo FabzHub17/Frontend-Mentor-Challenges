@@ -1,0 +1,28 @@
+@use "../abstracts/variables" as v;
+
+body {
+  font-size: 1.6rem;
+  font-family: "Josefin Sans", sans-serif;
+ 
+}
+
+.heading-primary {
+  font-size: 4.5rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.9rem;
+  padding: 1rem;
+  color: v.$color-secondary;
+
+  span {
+    color: v.$color-primary-light;
+    font-weight: 300;
+  }
+}
+
+.paragraph {
+  padding: 0 1.5rem;
+  background-image: linear-gradient(135deg, hsl(0, 35%, 72%), hsl(0, 74%, 74%));
+  background-clip: text;
+  color: transparent;
+}
