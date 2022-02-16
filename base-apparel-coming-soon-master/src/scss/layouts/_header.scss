@@ -1,7 +1,18 @@
+@use "../abstracts" as a;
 
 .header{
 
     &__logo-box{
-        padding:3rem 4rem;
+        padding: 2rem 0;
+
+        @include a.respond(desktop){
+            padding:6rem 0;
+        }
+    }
+
+    &__logo{
+        @include a.respond(desktop){
+            width: 15rem;
+        }
     }
 }

@@ -1,4 +1,4 @@
-@use "../abstracts/variables" as v;
+@use "../abstracts" as a;
 
 .footer{
     padding:10rem 0;
@@ -13,7 +13,7 @@
 
         &:link,
         &:visited{
-            color: v.$color-secondary-dark;
+            color: a.$color-secondary-dark;
             font-size: 1.2rem;
             transition:all .2s;
             display: inline-block;
@@ -21,7 +21,7 @@
         }
 
         &:hover{
-            color: v.$color-primary-light;
+            color: a.$color-primary-light;
             box-shadow: 0 1rem 2rem rgba(#000,.05);
             transform: translateY(-.4rem);
         }
@@ -30,4 +30,7 @@
 
 
     }
+
+    @include a.respond(desktop) {
+      }
 }

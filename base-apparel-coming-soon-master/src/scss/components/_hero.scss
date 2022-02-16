@@ -1,0 +1,17 @@
+@use "../abstracts" as a;
+
+.hero {
+  &--mobile {
+    @include a.full-width;
+    @include a.respond(desktop) {
+      display: none;
+    }
+  }
+
+  &--desktop {
+    background-image: url("../images/hero-desktop.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top left;
+  }
+}

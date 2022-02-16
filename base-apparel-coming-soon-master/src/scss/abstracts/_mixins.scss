@@ -1,0 +1,56 @@
+@use "./variables" as v;
+
+//CLEAR FIX FOR FLOATS
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+//BREAK OUT OF PARENT ELEMENT AND SPAN FULL WIDTH OF PAGE
+@mixin full-width {
+  left: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  max-width: 100vw;
+  position: relative;
+  right: 50%;
+  width: 100vw;
+}
+
+/*
+breakpoints chosen
+
+0-600px -       phone (normal styles apply)
+600-900px -     tab-small
+900-1200px -    tab-large
+1200-1960px -   desktop
+1900 + -        desktop-big
+
+
+*/
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == tab-small {
+    @media (min-width: 600px) {
+      @content;
+    }
+  }
+  @if $breakpoint == tab-big {
+    @media (min-width: 900px) {
+      @content;
+    }
+  }
+  @if $breakpoint == desktop {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  }
+  @if $breakpoint == desktop-big {
+    @media (min-width: 1960px) {
+      @content;
+    }
+  }
+}

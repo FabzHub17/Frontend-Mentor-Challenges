@@ -1,11 +1,39 @@
-@use "../abstracts/variables" as v;
+@use "../abstracts" as a;
 
 .section-left {
-  padding: 2rem 0;
+
+  background-image: url("../images/bg-pattern-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  &__container {
+    width: 80%;
+    margin: 0 auto;
+
+    @include a.respond(desktop) {
+      width: 40%;
+    }
+
+  }
+
+  &__sign-up {
+    text-align: center;
+    padding: 4rem 0;
+
+    @include a.respond(desktop){
+      text-align: left;
+  }
+  }
+
+  @include a.respond(desktop) {
+    width: 60%;
+  }
 }
 
-.sign-up-section {
-  padding: 4rem 1rem 0;
-  text-align: center;
-  width: 80%;
+.section-right {
+  width: 40%;
+  display: none;
+  @include a.respond(desktop) {
+    display: inline-block;
+
+  }
 }
