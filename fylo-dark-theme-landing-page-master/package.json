@@ -1,0 +1,33 @@
+{
+  "name": "fylo-dark-theme-landing-page-master",
+  "description": "![Design preview for the Fylo dark theme landing page challenge](./design/desktop-preview.jpg)",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "anymatch": "^3.1.2",
+    "chokidar": "^3.5.3",
+    "binary-extensions": "^2.2.0",
+    "immutable": "^4.0.0",
+    "braces": "^3.0.2",
+    "fill-range": "^7.0.1",
+    "is-binary-path": "^2.1.0",
+    "glob-parent": "^5.1.2",
+    "is-extglob": "^2.1.1",
+    "is-glob": "^4.0.3",
+    "is-number": "^7.0.0",
+    "picomatch": "^2.3.1",
+    "readdirp": "^3.6.0",
+    "normalize-path": "^3.0.0",
+    "source-map-js": "^1.0.2",
+    "to-regex-range": "^5.0.1"
+  },
+  "scripts": {
+    "compile:sass": "sass src/sass/main.scss css/main.css -w"
+  },
+ "devDependencies": {
+    "sass": "^1.49.8"
+  },
+  "keywords": [],
+  "author": "Fabio Vitharana",
+  "license": "ISC"
+}

@@ -1,0 +1,42 @@
+@use "../abstracts" as a;
+
+.intro-section {
+  background-color: var(--color-primary-light-1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+
+  & > * {
+    position: relative;
+    z-index: 10;
+  }
+
+  &__img {
+    width: 90%;
+  }
+
+  &__img-bg {
+    max-width: 100vw;
+    width: 100vw;
+    margin-top: -6.5rem;
+    position: relative;
+    z-index: 0;
+  }
+
+  &__content-wrapper {
+    background-color: var(--color-primary);
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: -10rem;
+  }
+}

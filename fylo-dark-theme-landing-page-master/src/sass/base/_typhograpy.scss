@@ -1,0 +1,24 @@
+@use '../abstracts' as a;
+
+body{
+    color:#fff;
+}
+
+.heading{
+    font-family: 'Raleway',sans-serif;
+    font-weight: 700;
+
+    &-primary{
+        font-size: 3rem;
+        line-height: 1.5em;
+    }
+}
+
+.paragraph{
+    font-family: 'Open Sans',sans-serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.6em;
+    color:rgb(206, 205, 205);
+    padding: 0 1.5rem;
+}
