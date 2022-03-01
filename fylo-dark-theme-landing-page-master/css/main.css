@@ -61,7 +61,6 @@ body {
   font-size: 1.6rem;
   line-height: 1.5em;
   color: #cecdcd;
-  padding: 0 1.5rem;
 }
 
 .u-margin-bottom-small {
@@ -148,6 +147,28 @@ body {
   margin-top: -10rem;
 }
 
+.info-section {
+  background-color: var(--color-primary);
+  padding: 10rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  text-align: left;
+  gap: 4rem;
+}
+.info-section__img {
+  width: 80%;
+  align-self: center;
+}
+.info-section__link {
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.7rem;
+}
+
 .container {
   padding: 2rem;
 }
@@ -176,13 +197,18 @@ body {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   color: var(--color-white);
-  text-align: center;
 }
 .btn-primary {
   background-color: var(--color-secondary-dark);
   padding: 2rem 5rem;
   border-radius: 50px;
   width: 60%;
+}
+.btn-text {
+  color: var(--color-secondary);
+  font-weight: 400;
+  border-bottom: 1px solid var(--color-secondary);
+  line-height: 2em;
 }
 
 .feature-box {

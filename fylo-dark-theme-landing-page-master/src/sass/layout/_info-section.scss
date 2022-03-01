@@ -1,0 +1,25 @@
+.info-section{
+    background-color: var(--color-primary);
+    padding:10rem 2rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    text-align: left;
+    gap:4rem;
+
+    &__img{
+        width:80%;
+        align-self: center;
+    }
+
+    &__link{
+        width:fit-content;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap:.7rem;
+
+    }
+}
