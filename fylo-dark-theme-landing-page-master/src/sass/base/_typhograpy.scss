@@ -25,4 +25,9 @@ body{
     font-size: 1.6rem;
     line-height: 1.5em;
     color:rgb(206, 205, 205);
+
+    &-small{
+        font-size: 1.4rem;
+        line-height: 1.7em;
+    }
 }
