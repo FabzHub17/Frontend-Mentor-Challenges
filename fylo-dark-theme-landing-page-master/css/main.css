@@ -50,12 +50,16 @@ body {
   font-size: 3rem;
   line-height: 1.5em;
 }
+.heading-secondary {
+  font-size: 2rem;
+  line-height: 0.5em;
+}
 
 .paragraph {
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
   font-size: 1.6rem;
-  line-height: 1.6em;
+  line-height: 1.5em;
   color: #cecdcd;
   padding: 0 1.5rem;
 }
@@ -148,6 +152,17 @@ body {
   padding: 2rem;
 }
 
+.features-section {
+  background-color: var(--color-primary);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 8rem;
+  padding: 12rem 2rem;
+}
+
 .logo {
   width: 10rem;
   height: auto;
@@ -168,6 +183,19 @@ body {
   padding: 2rem 5rem;
   border-radius: 50px;
   width: 60%;
+}
+
+.feature-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem;
+}
+.feature-box__icon {
+  width: 7.5rem;
+  height: auto;
 }
 
 /*# sourceMappingURL=main.css.map */

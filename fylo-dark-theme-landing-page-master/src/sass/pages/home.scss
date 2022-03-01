@@ -4,3 +4,13 @@
     padding: 2rem;
 }
 
+.features-section{
+    background-color: var(--color-primary);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap:8rem;
+    padding: 12rem 2rem;
+}

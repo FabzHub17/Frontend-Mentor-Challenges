@@ -12,13 +12,18 @@ body{
         font-size: 3rem;
         line-height: 1.5em;
     }
+
+    &-secondary{
+        font-size: 2rem;
+        line-height: .5em;
+    }
 }
 
 .paragraph{
     font-family: 'Open Sans',sans-serif;
     font-weight: 400;
     font-size: 1.6rem;
-    line-height: 1.6em;
+    line-height: 1.5em;
     color:rgb(206, 205, 205);
     padding: 0 1.5rem;
 }
