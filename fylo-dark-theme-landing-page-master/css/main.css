@@ -173,6 +173,60 @@ body {
   gap: 0.7rem;
 }
 
+.footer {
+  background-color: var(--color-primary-dark);
+  padding: 10rem 2rem;
+}
+.footer__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: left;
+  gap: 6.5rem;
+}
+.footer__paragraph {
+  color: #fff;
+}
+.footer__icon {
+  align-self: flex-start;
+}
+.footer .company-info-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 2rem;
+}
+.footer .company-info-wrapper .info-col {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2.5rem;
+}
+.footer__nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: left;
+  gap: 2rem;
+}
+.footer__link {
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 1.7rem;
+}
+.footer__socials-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+}
+.footer__socials-wrapper .social-icon {
+  fill: #fff;
+  width: 3rem;
+}
+
 .container {
   padding: 2rem;
 }
@@ -190,7 +244,7 @@ body {
 
 .testimonials-section {
   background-color: var(--color-primary);
-  padding: 12rem 2rem;
+  padding: 12rem 2rem 40rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -203,6 +257,9 @@ body {
   height: auto;
   transition: all 0.2s;
 }
+.logo-big {
+  width: 15rem;
+}
 .logo:hover {
   width: 11rem;
 }
@@ -211,12 +268,14 @@ body {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   color: var(--color-white);
+  border: none;
 }
 .btn-primary {
   background-color: var(--color-secondary-dark);
   padding: 2rem 5rem;
   border-radius: 50px;
   width: 60%;
+  font-size: 1.7rem;
 }
 .btn-text {
   color: var(--color-secondary);
@@ -273,6 +332,39 @@ body {
   font-weight: 400;
   font-size: 1.3rem;
   color: #cecdcd;
+}
+
+.signup-box {
+  background-color: var(--color-primary-light-2);
+  padding: 5rem 2rem;
+  border-radius: 10px;
+  box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+  margin-top: -31rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.form, .form__input, .form button {
+  width: 100%;
+}
+.form__input {
+  padding: 2rem 4rem;
+  border-radius: 50px;
+  border: none;
+}
+.form__input::placeholder {
+  color: #a3a0a0;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,0 +1,65 @@
+.footer {
+  background-color: var(--color-primary-dark);
+  padding: 10rem 2rem;
+
+
+  &__content{
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: left;
+      gap:6.5rem;
+  }
+
+  &__paragraph{
+      color:#fff ;
+  }
+
+
+  &__icon {
+    align-self: flex-start;
+  }
+
+  .company-info-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 2rem;
+
+    .info-col {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 2.5rem;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: left;
+    gap: 2rem;
+  }
+
+  &__link {
+    color: #fff;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 1.7rem;
+  }
+
+
+  &__socials-wrapper{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap:2.5rem;
+
+      .social-icon{
+          fill:#fff;
+          width:3rem;
+      }
+  }
+}
