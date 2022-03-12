@@ -1,25 +1,67 @@
-.info-section{
-    background-color: var(--color-primary);
-    padding:10rem 2rem;
+@use "../abstracts" as a;
 
+.info-section {
+  background-color: var(--color-primary);
+  padding: 10rem 2rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  text-align: left;
+  gap: 4rem;
+
+  @include a.respond(tab-small) {
+    padding: 9rem 4rem;
+  }
+
+  @include a.respond(tab-big) {
+    padding: 9rem 6rem;
+  }
+
+  @include a.respond(desktop) {
+    flex-direction: row;
+  }
+
+  &__img {
+    width: 80%;
+    align-self: center;
+
+    @include a.respond(tab-small) {
+      width: 70%;
+    }
+
+    @include a.respond(desktop) {
+      flex: 0 0 35%;
+    }
+  }
+
+  &__content {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: left;
     text-align: left;
-    gap:4rem;
+    gap: 4rem;
 
-    &__img{
-        width:80%;
-        align-self: center;
+    @include a.respond(tab-big) {
+      text-align: center;
+      justify-content: center;
+      align-items: center;
     }
 
-    &__link{
-        width:fit-content;
-        display: flex;
+    @include a.respond(desktop){
+        text-align: left;
         justify-content: center;
-        align-items: center;
-        gap:.7rem;
+        align-items:flex-start;
+      }
+  }
 
-    }
+  &__link {
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.7rem;
+  }
 }

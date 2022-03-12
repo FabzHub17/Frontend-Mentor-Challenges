@@ -7,16 +7,30 @@
   align-items: center;
   height: 8rem;
 
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-weight: 400;
+
+  @include a.respond(desktop) {
+    font-size: 1.5rem;
+  }
+
 }
 
 .nav {
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex:0 0 50%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 0 0 50%;
+
+  @include a.respond(tab-big) {
+    flex: 0 0 30%;
+  }
+
+  @include a.respond(desktop) {
+    flex: 0 0 25%;
+  }
+
 
   &__menu {
     display: flex;
@@ -27,12 +41,12 @@
   }
 
   &__item {
-      transition: all .2s;
+    transition: all 0.2s;
 
-    &:hover{
-        border-bottom: 2px solid var(--color-secondary);
-        color: var(--color-secondary);
-        transform: translateY(-.5rem) scale(1.1);
+    &:hover {
+      border-bottom: 2px solid var(--color-secondary);
+      color: var(--color-secondary);
+      transform: translateY(-0.5rem) scale(1.1);
     }
   }
 

@@ -1,0 +1,21 @@
+.attribution{
+    background-color: var(--color-primary-dark);
+    font-family: 'Open Sans',sans-serif;
+    font-weight: 400;
+    font-size: .9rem;
+    color:rgb(110, 110, 110);
+    padding:1rem;
+
+    & a{
+        color:rgb(167, 166, 166);
+    }
+
+    &__developer{
+        transition: all .2s;
+
+        &:hover{
+            
+            color: #fff;
+        }
+    }
+}

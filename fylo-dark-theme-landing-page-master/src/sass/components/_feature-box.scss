@@ -1,3 +1,6 @@
+@use '../abstracts' as a;
+
+
 .feature-box{
 
     display: flex;
@@ -6,6 +9,15 @@
     align-items: center;
     gap:2rem;
     padding: 1rem;
+
+    @include a.respond(tab-big){
+        flex: 0 0 45%;
+    }
+
+    @include a.respond(desktop){
+        flex: 0 0 33.33333%;
+    }
+
 
     &__icon{
         width: 7.5rem;

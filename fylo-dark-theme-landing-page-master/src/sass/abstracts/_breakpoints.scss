@@ -1,0 +1,38 @@
+// MEDIA QUERY MANAGER
+/*
+
+0-600px:        where our normal styles apply (mobile first approach)
+600-900px:      Tablet portrait
+900-1200px:     Tablet landscape
+(1200-1980):    desktop
+
+1980px + :      big desktop
+
+
+$breakpoint argument choices:
+
+- tab-small
+- tab-big
+- desktop
+- desktop-big
+
+ORDER: Base + typography > general layout + grid > page layout > components
+
+1em = 16px
+*/
+
+@mixin respond($breakpoint) {
+    @if $breakpoint == tab-small{
+        @media(min-width:37.5em){@content;} // 600px
+    }
+    @if $breakpoint == tab-big{
+        @media(min-width:56.25em){@content;} // 900px
+    }
+    @if $breakpoint == desktop{
+        @media(min-width:75em){@content;} // 1200px
+    }
+    @if $breakpoint == desktop-big{
+        @media(min-width:123.75em){@content;} // 1980px
+    }
+    
+}

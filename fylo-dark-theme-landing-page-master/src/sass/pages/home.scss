@@ -2,6 +2,14 @@
 
 .container{
     padding: 2rem;
+
+    @include a.respond(tab-small){
+        padding:4rem;
+    }
+
+    @include a.respond(tab-big){
+        padding:3rem 6rem;
+    }
 }
 
 .features-section{
@@ -10,9 +18,25 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
+    // text-align: center;
     gap:8rem;
     padding: 12rem 2rem;
+
+    @include a.respond(tab-small){
+        padding:11rem 4rem;
+    }
+
+    @include a.respond(tab-big){
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content:space-around;
+        align-items: stretch;
+        
+        gap:7rem;
+    }
+
+    
 }
 
 .testimonials-section{
@@ -23,5 +47,17 @@
     justify-content: center;
     align-items: center;
     gap:3rem;
+
+    @include a.respond(tab-small){
+        padding:11rem 4rem 40rem;
+    }
+
+    @include a.respond(tab-big){
+        padding:11rem 6rem 40rem;
+    }
+    
+    @include a.respond(desktop){
+        flex-direction: row;
+    }
 
 }

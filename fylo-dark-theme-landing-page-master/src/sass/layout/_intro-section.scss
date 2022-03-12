@@ -9,7 +9,7 @@
   text-align: center;
   position: relative;
   z-index: 1;
-  
+  overflow: hidden;
 
   & > * {
     position: relative;
@@ -18,6 +18,10 @@
 
   &__img {
     width: 90%;
+
+    @include a.respond(tab-big) {
+      width: 78%;
+    }
   }
 
   &__img-bg {
@@ -26,10 +30,24 @@
     margin-top: -6.5rem;
     position: relative;
     z-index: 0;
+
+    @include a.respond(tab-big) {
+      position: absolute;
+      bottom: 0;
+      margin-top: 0;
+    }
+
+    @include a.respond(desktop){
+      height:45%;
+    }
   }
 
   &__content-wrapper {
     background-color: var(--color-primary);
+
+    @include a.respond(tab-big) {
+      background-color: transparent;
+    }
   }
 
   &__content {
@@ -39,5 +57,14 @@
     align-items: center;
     gap: 2rem;
     margin-top: -10rem;
+
+    @include a.respond(tab-big) {
+      margin-top: 0;
+      padding: 0 4rem;
+    }
+
+    @include a.respond(desktop){
+      padding:0 10%;
+    }
   }
 }

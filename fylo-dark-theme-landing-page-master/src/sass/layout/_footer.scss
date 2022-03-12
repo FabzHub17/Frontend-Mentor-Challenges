@@ -1,20 +1,44 @@
+@use "../abstracts" as a;
+
 .footer {
   background-color: var(--color-primary-dark);
-  padding: 10rem 2rem;
+  padding: 10rem 2rem 4rem;
 
-
-  &__content{
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: left;
-      gap:6.5rem;
+  @include a.respond(tab-small) {
+    padding: 10rem 4rem 4rem;
   }
 
-  &__paragraph{
-      color:#fff ;
+  @include a.respond(tab-big) {
+    padding: 10rem 6rem 4rem;
   }
 
+  @include a.respond(desktop) {
+    padding: 10rem 4rem 3rem;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    // align-items: left;
+    gap: 6.5rem;
+
+    @include a.respond(tab-big) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 4rem;
+    }
+
+    @include a.respond(desktop) {
+      flex-wrap: nowrap;
+      gap: 3rem;
+      align-items:flex-start;
+    }
+  }
+
+  &__paragraph {
+    color: #fff;
+  }
 
   &__icon {
     align-self: flex-start;
@@ -27,11 +51,24 @@
     justify-content: flex-start;
     gap: 2rem;
 
+    @include a.respond(desktop) {
+      flex: 0 0 55%;
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      grid-template-rows: min-content;
+    }
+
     .info-col {
       display: flex;
       justify-content: flex-start;
       align-items: center;
       gap: 2.5rem;
+
+      &--3 {
+        @include a.respond(desktop) {
+          grid-column-start: 2;
+        }
+      }
     }
   }
 
@@ -41,6 +78,16 @@
     justify-content: flex-start;
     align-items: left;
     gap: 2rem;
+
+    @include a.respond(tab-big) {
+      flex: 0 0 45%;
+    }
+
+    @include a.respond(desktop) {
+      flex: 0 0 12%;
+    }
+
+
   }
 
   &__link {
@@ -48,18 +95,33 @@
     font-family: "Open Sans", sans-serif;
     font-weight: 400;
     font-size: 1.7rem;
+    cursor: pointer;
+
+    &:hover{
+      color:var(--color-secondary);
+    }
+
+    
   }
 
+  &__socials-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
 
-  &__socials-wrapper{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap:2.5rem;
+    @include a.respond(tab-big) {
+      flex: 1;
+    }
+    
+    .social-icon {
+      fill: #fff;
+      width: 3rem;
+      cursor:pointer;
+      transition: all .2s;
 
-      .social-icon{
-          fill:#fff;
-          width:3rem;
+      &:hover{
+        fill: var(--color-secondary);
       }
+    }
   }
 }
