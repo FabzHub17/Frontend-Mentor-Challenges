@@ -1,0 +1,18 @@
+.heading{
+    font-weight: 700;
+
+    &-primary{
+        font-size: 3.5rem;
+        padding: 0 1.5rem;
+
+    }
+}
+
+.paragraph{
+    color: var(--color-grey-light-1);
+    padding:0 1.5rem;
+
+    &-big{
+        font-size: inherit;
+    }
+}

@@ -1,0 +1,25 @@
+.btn {
+  border: none;
+
+  &-primary {
+
+    &,
+    &:visited {
+      color: var(--color-white);
+      background-color: var(--color-primary-1);
+      padding: 1.5rem 3rem;
+      border-radius: 5rem;
+      box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.1);
+      transition: all .2s;
+    }
+
+    &:active{
+        transform: translateY(.3rem);
+        box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.15);
+    }
+
+    &:hover{
+        background-color: lighten(hsl(180, 66%, 49%),15)
+    }
+  }
+}

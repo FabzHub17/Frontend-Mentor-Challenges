@@ -1,0 +1,140 @@
+:root {
+  --color-primary-1: hsl(180, 66%, 49%);
+  --color-primary-2: hsl(257, 27%, 26%);
+  --color-secondary: hsl(0, 87%, 67%);
+  --color-grey-light-1: hsl(0, 0%, 75%);
+  --color-grey-light-2: hsl(257, 7%, 63%);
+  --color-grey-dark-1: hsl(255, 11%, 22%);
+  --color-grey-dark-2: hsl(260, 8%, 14%);
+  --color-white:#fff;
+}
+
+.u-container {
+  padding: 2rem 2rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1.8rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.heading {
+  font-weight: 700;
+}
+.heading-primary {
+  font-size: 3.5rem;
+  padding: 0 1.5rem;
+}
+
+.paragraph {
+  color: var(--color-grey-light-1);
+  padding: 0 1.5rem;
+}
+.paragraph-big {
+  font-size: inherit;
+}
+
+.toggle-menu__wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 2.3rem;
+  cursor: pointer;
+}
+.toggle-menu__bar {
+  background-color: var(--color-grey-light-1);
+  height: 4px;
+  border-radius: 10px;
+  margin: 4px 0;
+  transition: 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
+.toggle-menu__bar:nth-of-type(1) {
+  width: 50%;
+}
+.toggle-menu__bar:nth-of-type(2) {
+  width: 100%;
+}
+.toggle-menu__bar:nth-of-type(3) {
+  width: 75%;
+}
+.toggle-menu__checkbox {
+  display: none;
+}
+.toggle-menu__checkbox:checked ~ .toggle-menu__bar:nth-of-type(1) {
+  transform-origin: bottom;
+  transform: rotatez(45deg) translate(8px, 0px);
+}
+.toggle-menu__checkbox:checked ~ .toggle-menu__bar:nth-of-type(2) {
+  transform-origin: top;
+  transform: rotatez(-45deg);
+}
+.toggle-menu__checkbox:checked ~ .toggle-menu__bar:nth-of-type(3) {
+  transform-origin: bottom;
+  width: 50%;
+  transform: translate(16px, -7.5px) rotatez(45deg);
+}
+
+.btn {
+  border: none;
+}
+.btn-primary, .btn-primary:visited {
+  color: var(--color-white);
+  background-color: var(--color-primary-1);
+  padding: 1.5rem 3rem;
+  border-radius: 5rem;
+  box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.1);
+  transition: all 0.2s;
+}
+.btn-primary:active {
+  transform: translateY(0.3rem);
+  box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.15);
+}
+.btn-primary:hover {
+  background-color: #67e0e0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+}
+.hero__img {
+  margin-right: -49%;
+  width: 130%;
+}
+.hero .paragraph-big, .hero .heading-primary {
+  width: 80%;
+}
+
+/*# sourceMappingURL=main.css.map */
