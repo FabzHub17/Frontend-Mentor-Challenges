@@ -1,25 +1,63 @@
 .btn {
   border: none;
+  background-color: transparent;
+  color: var(--color-white);
 
-  &-primary {
+  &:hover {
+    cursor: pointer;
+  }
 
+  &-primary,
+  &-primary--1 {
     &,
     &:visited {
       color: var(--color-white);
+      font-family: "Poppins", sans-serif;
+      font-size: 1.8rem;
+      font-weight: 700;
       background-color: var(--color-primary-1);
       padding: 1.5rem 3rem;
       border-radius: 5rem;
       box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.1);
-      transition: all .2s;
+      transition: all 0.2s;
     }
 
-    &:active{
-        transform: translateY(.3rem);
-        box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.15);
+    &:active {
+      transform: translateY(0.3rem);
+      box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.15);
     }
 
-    &:hover{
-        background-color: lighten(hsl(180, 66%, 49%),15)
+    &:hover {
+      background-color: lighten(hsl(180, 66%, 49%), 13);
+    }
+  }
+
+  &-primary--1 {
+    border-radius: 5px;
+
+    &:active {
+      transform: scale(0.98);
+      box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.15);
+    }
+  }
+
+  &-text {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    background-color: var(--color-primary-1);
+    padding: 1.2rem 3rem;
+    border-radius: 5rem;
+    box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.1);
+    transition:all .2s;
+
+    &:active {
+      transform: scale(0.98);
+      box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.15);
+    }
+
+    &:hover {
+      background-color: lighten(hsl(180, 66%, 49%), 13);
     }
   }
 }

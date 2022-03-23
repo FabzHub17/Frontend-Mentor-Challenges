@@ -1,0 +1,41 @@
+.feature-box{
+    background-color: var(--color-white);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:1.5rem;
+    height: 30rem;
+    position:relative;
+
+    &__icon-wrapper{
+        background-color: var(--color-primary-2);
+        display: inline-block;
+        border-radius: 50%;
+        height:9rem;
+        width: 9rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        // margin-top:-4.5rem;
+        position: absolute;
+        top:-4.5rem;
+
+    }
+
+    &__icon{
+        height:4.5rem;
+        width:4.5rem;
+        
+    }
+
+    &__connect-line{
+        height: 6rem;
+        width:1rem;
+        background-color:var(--color-primary-1);
+        position:absolute;
+        bottom:-6rem;
+
+    }
+}
