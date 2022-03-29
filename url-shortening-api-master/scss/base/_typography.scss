@@ -1,30 +1,42 @@
+@use "../abstracts" as a;
+
+
 .heading{
     font-weight: 700;
 
     &-primary{
-        font-size: 3.5rem;
-        padding: 0 1.5rem;
+        font-size: 4rem;
+
+        @include a.respond(desktop){
+            font-size: 5rem;
+        }
+        
 
     }
 
     &-secondary{
-        font-size: 2.5rem;
-        padding: 0 1.5rem;
+        font-size: 3.5rem;
+
+        @include a.respond(desktop){
+            font-size: 4rem;
+        }
     }
 
     &-tertiary{
-        font-size: 2.3rem;
-        padding: 0 1.5rem;
+        font-size: 3rem;
+
+        @include a.respond(desktop){
+            font-size: 3.5rem;
+        }
 
     }
 }
 
 .paragraph{
     color: var(--color-grey-light-1);
-    padding:0 1.5rem;
 
     &-big{
-        font-size: inherit;
+        font-size: 1.8rem;
     }
 
     &-medium{

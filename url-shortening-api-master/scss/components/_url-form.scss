@@ -1,3 +1,5 @@
+@use "../abstracts" as a;
+
 .url-form {
   display: flex;
   flex-direction: column;
@@ -21,6 +23,14 @@
     position: relative;
     z-index: 10;
     padding: 1rem 3.5rem;
+
+    @include a.respond(tab-big){
+      width:unset;
+    }
+    @include a.respond(desktop){
+      padding: 1.5rem 3.5rem;
+    }
+    
   }
 
   &__input {
@@ -35,9 +45,18 @@
         outline:none;
         transform: scale(0.96);
     }
+
+    @include a.respond(tab-big){
+      width: 80%;
+    }
   }
 
   &__btn {
+    @include a.respond(tab-big){
+      flex-grow: 1;
+      padding: 1.5rem 2.5rem;
+    }
+
   }
 
   &__bg-img {
@@ -47,5 +66,18 @@
     z-index: 1;
     overflow: none;
     height: 14rem;
+
+    @include a.respond(desktop){
+      height: 100%;
+      width: 100%;
+    }
+
+
+  }
+
+  @include a.respond(tab-big){
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0 2rem;
   }
 }

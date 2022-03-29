@@ -1,0 +1,28 @@
+@use "../abstracts" as a;
+
+.nav {
+  display: none;
+
+  &,
+  &-cta{
+      display: none;
+  }
+
+  @include a.respond(desktop) {
+    margin-right: auto;
+
+    &,
+    &-cta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 2rem;
+      
+    }
+
+    &__link{
+        color: var(--color-grey-light-2);
+
+    }
+  }
+}

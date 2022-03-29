@@ -1,3 +1,5 @@
+@use "../abstracts" as a;
+
 .footer{
     background-color: var(--color-grey-dark-2);
     color:var(--color-white);
@@ -13,14 +15,19 @@
         & path{
             fill: var(--color-white);
         }
+        
+        @include a.respond(desktop){
+            margin-right:auto;
+        }
     }
 
     &__list{
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items:center;
+        justify-content: flex-start;
+        align-items: stretch;
         gap:1.5rem;
+
 
         
     }
@@ -38,10 +45,28 @@
         justify-content: center;
         align-items: center;
         gap:2.5rem;
+
+        @include a.respond(desktop){
+            align-items: flex-start;
+            margin-top: .5rem;
+            margin-left: auto;
+        }
     }
 
     &__icon{
         cursor:pointer;
+
     }
+
+    
+    @include a.respond(desktop){
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-start;
+        text-align: left;
+        gap:8rem;
+
+    }
+
 
 }

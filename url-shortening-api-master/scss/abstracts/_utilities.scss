@@ -1,7 +1,31 @@
-.u-container{
-    padding: 4rem 2rem;
+@use "./breakpoints" as a;
+
+.u-container {
+  padding: 4rem 2rem;
+
+  @include a.respond(tab-small) {
+    padding: 4rem 3rem;
+  }
+
+  @include a.respond(tab-big) {
+    padding: 4rem 4rem;
+  }
+
+  @include a.respond(desktop) {
+    padding: 4rem 8rem;
+  }
+
+  @include a.respond(desktop-big) {
+    padding: 4rem 12rem;
+  }
 }
 
-.u-margin-bottom-small{
-    margin-bottom: 2rem;
+.u-center{
+  margin-right: auto;
+  margin-left: auto;
 }
+
+.u-margin-bottom-small {
+  margin-bottom: 2rem;
+}
+
